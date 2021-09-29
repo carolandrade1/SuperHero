@@ -19,11 +19,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    margin: 0;
-    padding: 0;
     display: flex;
     min-height: 100vh;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
   }
 
   ul, li {
