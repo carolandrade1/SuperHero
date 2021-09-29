@@ -25,8 +25,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     position: relative;
     padding: 0;
     font-family: 'Inter', sans-serif;
