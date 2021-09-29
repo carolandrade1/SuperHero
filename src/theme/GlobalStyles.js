@@ -4,6 +4,7 @@ import { normalize } from 'styled-normalize';
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+    font-size: 16px;
   };
 
   ${normalize}
@@ -15,16 +16,22 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    display: grid;
+    place-items: center;
     scroll-behavior: smooth;
+    height: 100vh;
+    width: 100%;
+    background-color: #F5F5F5;
   }
 
-  html, body {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
+  body {
+    width: 80%;
+    height: 80%;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    background-color: #F2ECE7;
+    border: 2px solid #000000;
+    border-radius: 5px;
   }
 
   ul, li {
