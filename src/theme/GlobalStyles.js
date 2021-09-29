@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     width: 80%;
     height: 80%;
+    position: relative;
     padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: #F2ECE7;
