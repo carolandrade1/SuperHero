@@ -4,10 +4,12 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from '../src/theme/GlobalStyles';
 import { theme } from '../src/theme';
+import IndexHead from '../src/components/common/head';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <IndexHead />
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component
