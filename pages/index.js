@@ -7,10 +7,9 @@ import Footer from '../src/components/common/footer';
 import HomeScreen from '../src/components/screens/homeScreen';
 import Menu from '../src/components/common/menu';
 
-
 export async function getStaticProps() {
   const TOKEN = process.env.TOKEN_SUPERHERO_API;
-  const id = 50;
+  const id = 1;
 
   const res = await fetch(`https://superheroapi.com/api/${TOKEN}/${id}`);
   const data = await res.json();
