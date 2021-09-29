@@ -1,7 +1,12 @@
 import React from 'react';
-
-import Title from '../src/components/Title';
+import SEO from '../src/components/common/SEO';
+import Footer from '../src/components/common/footer';
 
 export default function Home() {
-  return <Title>My page</Title>;
+  return (
+    <>
+      <SEO headTitle="Home" />
+      <Footer />
+    </>
+  );
 }
