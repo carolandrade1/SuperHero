@@ -1,11 +1,47 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
+    box-sizing: border-box;
+  };
+
+  ${normalize}
+
+  #__next {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
   }
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  h1, h2, h3, h4, p {
+    line-height: 1.15;
+    margin: 0;
+  }
+  
 `;
 
 export default GlobalStyle;
