@@ -5,6 +5,8 @@ import React from 'react';
 import SEO from '../src/components/common/SEO';
 import Footer from '../src/components/common/footer';
 import HomeScreen from '../src/components/screens/homeScreen';
+import Menu from '../src/components/common/menu';
+
 
 export async function getStaticProps() {
   const TOKEN = process.env.TOKEN_SUPERHERO_API;
@@ -25,6 +27,7 @@ export default function Home({ data }) {
   return (
     <>
       <SEO headTitle="Home" />
+      <Menu />
       <HomeScreen data={data} />
       <Footer />
     </>
