@@ -5,23 +5,20 @@ const ButtonContainer = styled.button`
   padding: 10px 25px;
   margin: 0;
   text-decoration: none;
-  background: transparent;
+  background: #FFFFFF;
   color: #000000;
   cursor: pointer;
   text-align: center;
   transition: ease-in-out 150ms ease;
   border: 1px solid;
-  border-radius: 10px;
-
 
   &:hover,
   &:focus {
-    background-color: white;
+    background-color: transparent;
   }
 
   &:focus {
     outline: 2px solid;
-    outline-offset: -4px;
   }
 
   &:active {
