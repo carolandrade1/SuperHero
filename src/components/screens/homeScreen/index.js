@@ -7,24 +7,17 @@ import UlContainer from './style';
 export default function HomeScreen({ data }) {
   return (
     <UlContainer>
-      <li key={data.id}>
-        <Link href={`/superhero/${data.id}`}>
-          <a>
-            <img src={data.image.url} alt={data.name} />
-            <h3>{data.id}</h3>
-            <h2>{data.name}</h2>
-          </a>
-        </Link>
-      </li>
-      {/* {data.map((item) => (
-        <li>
-          <a href="/">
-            <img src={item.image.url} alt={item.name} />
-            <h3>{item.id}</h3>
-            <h2>{item.name}</h2>
-          </a>
+      {data.map((item) => (
+        <li key={item.id}>
+          <Link href={`/superhero/${item.id}`}>
+            <a>
+              <img src={item.image.url} alt={item.name} />
+              <h3>{item.id}</h3>
+              <h2>{item.name}</h2>
+            </a>
+          </Link>
         </li>
-      ))} */}
+      ))}
     </UlContainer>
   );
 }
