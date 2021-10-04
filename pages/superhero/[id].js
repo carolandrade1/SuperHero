@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import range from 'lodash.range';
 import SEO from '../../src/components/common/SEO';
 import Footer from '../../src/components/common/footer';
 import Menu from '../../src/components/common/menu';
@@ -36,11 +35,8 @@ SuperHeroPage.propTypes = {
 };
 
 export async function getStaticPaths() {
-  const paths = range(process.env.FIRST_HERO, process.env.LAST_HERO)
-    .map((numero) => ({ params: { id: numero.toString() } }));
-
   return {
-    paths,
-    fallback: false,
+    paths: [],
+    fallback: 'blocking',
   };
 }
