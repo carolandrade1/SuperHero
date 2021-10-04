@@ -1,11 +1,36 @@
 import styled from 'styled-components';
 
-const UlContainer = styled.ul`
+const Form = styled.form`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  padding-top: 16px;
+
+  div {
+    position: relative;
+    padding: 0 10px;
+  }
+
+  input {
+    padding: 5px 40px;
+    width: 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 10%;
+  }
+`;
+
+export const UlContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 15px;
-  height: 81vh;
+  height: 71vh;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -77,4 +102,4 @@ const UlContainer = styled.ul`
 
 `;
 
-export default UlContainer;
+export default Form;
