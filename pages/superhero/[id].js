@@ -35,7 +35,8 @@ SuperHeroPage.propTypes = {
 };
 
 export async function getStaticPaths() {
-  const paths = range(1, 732).map((numero) => ({ params: { id: numero.toString() } }));
+  const paths = range(process.env.FIRST_HERO, process.env.LAST_HERO)
+    .map((numero) => ({ params: { id: numero.toString() } }));
 
   return {
     paths,
