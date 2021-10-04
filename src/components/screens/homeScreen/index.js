@@ -11,7 +11,7 @@ export default function HomeScreen({ data }) {
         <li key={item.id}>
           <Link href={`/superhero/${item.id}`}>
             <a>
-              <img src={item.image.url} alt={item.name} />
+              <img src={item.images.lg} alt={item.name} />
               <div>
                 <span>
                   #
