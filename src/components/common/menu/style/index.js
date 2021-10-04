@@ -8,6 +8,10 @@ const Navbar = styled.nav`
     width:100%;
     padding: 5px 15px;
     border-bottom: 1px solid;
+
+    a {
+      font-size: 18px;
+    }
 `;
 
 export default Navbar;

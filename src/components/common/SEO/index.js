@@ -3,22 +3,22 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 function SEO({ headTitle }) {
-  const pageTitleDefault = 'SuperHero';
+  const pageTitleDefault = 'Super Hero';
   const hasHeadTitle = Boolean(headTitle);
   const title = hasHeadTitle
     ? (`${headTitle} | ${pageTitleDefault}`)
     : (pageTitleDefault);
   const url = 'https://super-hero-beta.vercel.app/';
-  const image = '';
+  const image = 'https://i.postimg.cc/3xGXctTv/heroes.png';
   const description = 'SuperHero';
 
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content="Portfolio" />
+      <meta name="description" content="Super Hero Page" />
       <meta name="author" content="Carol Andrade Santos" />
-      <meta name="keywords" content="Next.js, React, Portfolio" />
-      <meta httpEquiv="content-language" content="pt-br, en-US" />
+      <meta name="keywords" content="Next.js, React, SuperHeroAPI" />
+      <meta httpEquiv="content-language" content="pt-br" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
       {/* <!-- Open Graph / Facebook --> */}

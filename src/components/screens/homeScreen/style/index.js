@@ -5,7 +5,7 @@ const UlContainer = styled.ul`
   flex-wrap: wrap;
   margin: 0;
   padding: 15px;
-  height: 70vh;
+  height: 81vh;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -59,10 +59,20 @@ const UlContainer = styled.ul`
 
     img {
       width: 100%;
+      max-height: 165px;
     }
 
-    h2, h3 {
-      text-align: center;
+    div {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 4px;
+    }
+
+    span {
+      font-weight: 500;
+      margin-bottom: 2px;
+      font-size: 14px;
     }
 
 `;
