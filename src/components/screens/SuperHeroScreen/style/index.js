@@ -52,7 +52,7 @@ export const SuperHeroCard = styled.div`
   margin: 15px 25px;
   padding: 10px;
   border: 1px solid;
-  background-color: white;
+  background-color: #FFFFFF;
 
     @media only screen and (max-width: 700px) {
       flex-direction: column;

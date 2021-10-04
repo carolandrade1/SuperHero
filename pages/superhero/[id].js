@@ -8,10 +8,8 @@ import SuperHeroScreen from '../../src/components/screens/SuperHeroScreen';
 
 export async function getStaticProps({ params }) {
   const TOKEN = process.env.TOKEN_SUPERHERO_API;
-
   const res = await fetch(`https://superheroapi.com/api/${TOKEN}/${params.id}`);
   const data = await res.json();
-  // console.log(data);
 
   return {
     props: {
@@ -23,7 +21,7 @@ export async function getStaticProps({ params }) {
 export default function SuperHeroPage({ data }) {
   return (
     <>
-      <SEO headTitle="Descrição" />
+      <SEO headTitle="Hero" />
       <Menu />
       <SuperHeroScreen data={data} />
       <Footer />
@@ -32,12 +30,8 @@ export default function SuperHeroPage({ data }) {
 }
 
 SuperHeroPage.propTypes = {
-  data: PropTypes.shape({
-    name: PropTypes.string,
-    sprites: PropTypes.shape({
-      front_default: PropTypes.string,
-    }),
-  }).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  data: PropTypes.object.isRequired,
 };
 
 export async function getStaticPaths() {
