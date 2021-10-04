@@ -1,28 +1,55 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Link from 'next/link';
-import UlContainer from './style';
+import Form, { UlContainer } from './style';
 
 export default function HomeScreen({ data }) {
+  const [searchHero, setSearchHero] = React.useState('');
+
   return (
-    <UlContainer>
-      {data.map((item) => (
-        <li key={item.id}>
-          <Link href={`/superhero/${item.id}`}>
-            <a>
-              <img src={item.images.sm} alt={item.name} loading="lazy" />
-              <div>
-                <span>
-                  #
-                  {item.id}
-                </span>
-                <h2>{item.name}</h2>
-              </div>
-            </a>
-          </Link>
-        </li>
-      ))}
-    </UlContainer>
+    <>
+      <Form>
+        <div>
+          <input
+            aria-label="Procurar herói"
+            type="search"
+            placeholder="Procurar herói"
+            onChange={(event) => {
+              setSearchHero(event.target.value);
+            }}
+          />
+          <img src="https://static.thenounproject.com/png/1272983-200.png" alt="" />
+        </div>
+      </Form>
+      <UlContainer>
+        {data.filter((value) => {
+          if (searchHero === '') {
+            return value;
+          } if (value.id.toString().includes(searchHero.toString())) {
+            return value;
+          } if (value.name.toLowerCase().includes(searchHero.toLowerCase())) {
+            return value;
+          }
+        }).map((item) => (
+          <li key={item.id}>
+            <Link href={`/superhero/${item.id}`}>
+              <a>
+                <img src={item.images.sm} alt={item.name} loading="lazy" />
+                <div>
+                  <span>
+                    #
+                    {item.id}
+                  </span>
+                  <h2>{item.name}</h2>
+                </div>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </UlContainer>
+    </>
   );
 }
