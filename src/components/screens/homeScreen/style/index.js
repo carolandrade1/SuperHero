@@ -4,7 +4,8 @@ const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding: 15px;
+  padding-top: 16px;
 
   div {
     position: relative;
@@ -29,7 +30,7 @@ export const UlContainer = styled.ul`
   flex-wrap: wrap;
   margin: 0;
   padding: 15px;
-  height: 70vh;
+  height: 71vh;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
