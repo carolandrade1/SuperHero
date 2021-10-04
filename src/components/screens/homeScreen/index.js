@@ -12,8 +12,13 @@ export default function HomeScreen({ data }) {
           <Link href={`/superhero/${item.id}`}>
             <a>
               <img src={item.image.url} alt={item.name} />
-              <h3>{item.id}</h3>
-              <h2>{item.name}</h2>
+              <div>
+                <span>
+                  #
+                  {item.id}
+                </span>
+                <h2>{item.name}</h2>
+              </div>
             </a>
           </Link>
         </li>
