@@ -21,12 +21,12 @@ export const GlobalProvider = (props) => {
   const addHero = (data) => {
     dispatch({ type: 'ADD_HERO_TO_LIST', payload: data });
   };
-  const deleteHero = (data) => {
-    dispatch({ type: 'DELETE_HERO_FROM_LIST', payload: data });
-  };
+  // const deleteHero = (data) => {
+  //   dispatch({ type: 'DELETE_HERO_FROM_LIST', payload: data });
+  // };
 
   return (
-    <GlobalContext.Provider value={{ favorites: state.favorites, addHero, deleteHero }}>
+    <GlobalContext.Provider value={{ favorites: state.favorites, addHero }}>
       {props.children}
     </GlobalContext.Provider>
   );

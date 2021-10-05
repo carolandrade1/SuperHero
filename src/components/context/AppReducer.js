@@ -5,8 +5,8 @@ export default (state, action) => {
         ...state,
         favorites: [action.payload, ...state.favorites],
       };
-    case 'DELETE_HERO_FROM_LIST':
-      return state.filter((favorites) => action.payload.id !== favorites.id);
+    // case 'DELETE_HERO_FROM_LIST':
+    //   return state.filter((favorites) => action.payload.id !== favorites.id);
     default:
       return state;
   }
