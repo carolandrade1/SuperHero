@@ -5,7 +5,7 @@ import { GlobalContext } from '../../context';
 import UlContainer from './style';
 
 export default function FavotitosScreen() {
-  const { favorites, deleteHero } = useContext(GlobalContext);
+  const { favorites } = useContext(GlobalContext);
   return (
     <section>
       <UlContainer>
@@ -21,7 +21,7 @@ export default function FavotitosScreen() {
               <button
                 type="button"
                 title="Deletar dos favoritos"
-                onClick={() => deleteHero(favorites)}
+                // onClick={() => deleteHero(favorites)}
               >
                 -
               </button>
