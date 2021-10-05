@@ -1,11 +1,23 @@
 import styled from 'styled-components';
 
-const Form = styled.form`
+const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+
+  a {
+    padding: 5px 20px;
+    border: 1px solid;
+  }
+`;
+
+export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  padding-top: 16px;
 
   div {
     position: relative;
@@ -30,7 +42,7 @@ export const UlContainer = styled.ul`
   flex-wrap: wrap;
   margin: 0;
   padding: 15px;
-  height: 71vh;
+  height: 65vh;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -69,37 +81,53 @@ export const UlContainer = styled.ul`
   }
 
     li {
-      width: 140px;
-      height: 240px;
+      width: 178px;
+      height: 334px;
       padding: 8px;
       margin: 10px auto;
       border: 1px solid #000000;
       background-color: #FFFFFF;
-      transition: ease-in-out 0.25s;
+      transition: ease-in-out 0.2s;
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
+        border: 2px solid;
       }
     }
 
     img {
       width: 100%;
-      max-height: 165px;
+      max-height: 240px;
     }
 
     div {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      align-items: center;
+      height: 76px;
       padding: 4px;
     }
 
-    span {
-      font-weight: 500;
-      margin-bottom: 2px;
-      font-size: 14px;
+    h2 {
+      font-size: 18px;
+      text-align: center;
     }
 
+    button {
+      cursor: pointer;
+      padding: 2px 10px;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 700;
+      background-color: transparent;
+      width: 50px;
+
+      &:hover {
+        background-color: #000000;
+        color: #FFFFFF;
+      }
+    }
 `;
 
-export default Form;
+export default Header;

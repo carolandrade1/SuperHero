@@ -2,28 +2,41 @@
 /* eslint-disable consistent-return */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
-import Form, { UlContainer } from './style';
+import { GlobalContext } from '../../context';
+import Header, { Form, UlContainer } from './style';
 
 export default function HomeScreen({ data }) {
+  const { addHero, favorites } = useContext(GlobalContext);
+
+  const storedHero = favorites.find((o) => o.id === data.forEach((item) => item.id));
+  const favoritesDisabled = storedHero;
+
   const [searchHero, setSearchHero] = React.useState('');
 
   return (
-    <>
-      <Form>
-        <div>
-          <input
-            aria-label="Procurar herói"
-            type="search"
-            placeholder="Procurar herói"
-            onChange={(event) => {
-              setSearchHero(event.target.value);
-            }}
-          />
-          <img src="https://static.thenounproject.com/png/1272983-200.png" alt="" />
-        </div>
-      </Form>
+    <section>
+      <Header>
+        <Form>
+          <div>
+            <input
+              aria-label="Procurar herói"
+              type="search"
+              placeholder="Procurar herói"
+              onChange={(event) => {
+                setSearchHero(event.target.value);
+              }}
+            />
+            <img src="https://static.thenounproject.com/png/1272983-200.png" alt="" />
+          </div>
+        </Form>
+        <Link href="/favoritos">
+          <a>
+            Favoritos
+          </a>
+        </Link>
+      </Header>
       <UlContainer>
         {data.filter((value) => {
           if (searchHero === '') {
@@ -37,19 +50,23 @@ export default function HomeScreen({ data }) {
           <li key={item.id}>
             <Link href={`/superhero/${item.id}`}>
               <a>
-                <img src={item.images.sm} alt={item.name} loading="lazy" />
-                <div>
-                  <span>
-                    #
-                    {item.id}
-                  </span>
-                  <h2>{item.name}</h2>
-                </div>
+                <img src={item.images.sm} alt={`Imagem do herói ${item.name}`} loading="lazy" />
               </a>
             </Link>
+            <div>
+              <h2>{item.name}</h2>
+              <button
+                type="button"
+                disabled={favoritesDisabled}
+                onClick={() => addHero(item)}
+                title="Adicionar aos favoritos"
+              >
+                +
+              </button>
+            </div>
           </li>
         ))}
       </UlContainer>
-    </>
+    </section>
   );
 }
