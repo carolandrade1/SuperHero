@@ -21,7 +21,6 @@ export default function FavotitosScreen() {
               <button
                 type="button"
                 title="Deletar dos favoritos"
-                // onClick={() => deleteHero(favorites)}
               >
                 -
               </button>

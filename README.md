@@ -66,8 +66,9 @@ Abaixo segue estrutura das pastas:
 |--pages/
 |----superhero
 |------[id].js
-|----index.js(home)
 |----404.js
+|----favoritos.js
+|----index.js(home)
 ```
 - pages: arquivos com as informações de cada página.
 
@@ -79,9 +80,11 @@ Abaixo segue estrutura das pastas:
 |--------head/
 |--------menu/
 |--------SEO/
+|------context/
 |------screens/
-|--------HomeScreen/
 |--------SuperHeroScreen/
+|--------FavoritosScreen/
+|--------HomeScreen/
 |--------NotFoundScreen/
 |----theme/
 |------GlobalStyles.js
@@ -102,7 +105,8 @@ Abaixo segue estrutura das pastas:
  
 ## 🧠 Funcionalidades
 
-- Na página pricipal você pode visualizar todos os heróis disponiveis na <a href="https://superheroapi.com/" target="_blank" rel="noopener noreferrer">API Super Hero</a>. Ao clicar em qualquer card você é direcionado para outra página com os dados daquele herói.
+- Na página pricipal você pode visualizar todos os heróis disponiveis na API Super Hero. Ao clicar em qualquer card você é direcionado para outra página com os dados daquele herói. É possivel adiconar um herói a seção de favoritos ao clicar no botão.
+- Na página dos Favoritos, voce visualiza os heróis que foram adicionados a lista.
 
 ---
 

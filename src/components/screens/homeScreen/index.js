@@ -8,10 +8,7 @@ import { GlobalContext } from '../../context';
 import Header, { Form, UlContainer } from './style';
 
 export default function HomeScreen({ data }) {
-  const { addHero, favorites } = useContext(GlobalContext);
-
-  const storedHero = favorites.find((o) => o.id === data.forEach((item) => item.id));
-  const favoritesDisabled = storedHero;
+  const { addHero } = useContext(GlobalContext);
 
   const [searchHero, setSearchHero] = React.useState('');
 
@@ -57,7 +54,6 @@ export default function HomeScreen({ data }) {
               <h2>{item.name}</h2>
               <button
                 type="button"
-                disabled={favoritesDisabled}
                 onClick={() => addHero(item)}
                 title="Adicionar aos favoritos"
               >
