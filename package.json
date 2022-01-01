@@ -12,7 +12,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@types/jest": "^27.0.2",
+    "@types/jest": "^27.4.0",
     "jest": "^27.2.0",
     "lodash.range": "^3.2.0",
     "next": "latest",
