@@ -12,8 +12,8 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@types/jest": "^27.0.2",
-    "jest": "^27.2.0",
+    "@types/jest": "^28.1.4",
+    "jest": "^28.1.2",
     "lodash.range": "^3.2.0",
     "next": "latest",
     "prop-types": "^15.7.2",
